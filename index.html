@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #FDEFE7;
+				font-family: "楷体";
+				position: relative;
+			}
+			ul li{
+				list-style: none;
+			}
+			.nav-head{
+				width: 100%;
+				height: 10.6rem;
+				background: #FF8288;
+				position: absolute;
+				left: 0;
+				top: 0;
+				line-height: 10.6rem;
+				text-align: center;
+				font-size:55px;
+				font-weight: bold;
+				color: #fff;
+			}
+			.nav-head img{
+				width: 5rem;
+				height: 4.375rem;
+				position: absolute;
+				left: 1.5rem;
+				top: 3.5rem;
+				cursor: pointer;
+			}
+			.mb{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 5.0rem;
+			}
+			.nav-list{
+				width: 65%;
+				height: 99.0rem;
+				position: absolute;
+				left: -65%;
+				top: 10.6rem;
+				background: #fff;
+				display: black;
+			}
+			.nav-list .bj{
+				width: 100%;
+				height: 100%;
+			}
+			.touxiang{
+				width: 100%;
+				height: 400px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-bottom: 1px solid #000000;
+			}
+			.tx{
+				width: 11rem;
+				height: 11rem;
+				position: absolute;
+				top: 80px;
+				left: 50px;
+				border-radius: 50%;
+				border:1px solid gray;
+			}
+			.touxiang span{
+				font-size: 50px;
+				position: absolute;
+				left: 20.5rem;
+				top: 8.75rem;
+			}
+			.list{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 25.0rem;
+			}
+			.list li{
+				width: 100%;
+				height: 12rem;
+				position: relative;
+				margin-top:0;
+			}
+			.list img{
+				width: 7.0rem;
+				height: 7.0rem;
+				position: absolute;
+				top: 4.5rem;
+				left: 3.25rem;			
+			}
+			.list a{
+				font-size: 55px;
+				position: absolute;
+				left: 14.5rem;
+				top: 6.25rem;
+				cursor: pointer;
+				text-decoration: none;
+				color: #000;
+			}
+			.list a:hover{
+				color: #FF8288;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav-head">
+			<img src="images/logo.png" id="logo"/>
+			主页
+		</div>
+		<div class="mb" id="mb"></div>
+		<div class="nav-list" id="nav-list">
+			<!-- <img src="images/Layer1.png" class="bj"/> -->
+			<div class="touxiang">
+				<img src="images/personal_03.png" class="tx"/>
+				<span id="span">未登录</span> 
+			</div>
+			<div class="list">
+				<ul>
+					<li>
+						<img src="images/icon1.png"/>
+						<a href="">主页</a>
+					</li>
+					<li>
+						<img src="images/icon2.png"/>
+						<a href="">日记墙</a>
+					</li>
+					<li>
+						<img src="images/icon3.png"/>
+						<a href="">关于我们</a>
+					</li>
+					<li>
+						<img src="images/icon4.png"/>
+						<a href="">我的信息</a>
+					</li>
+					<li>
+						<img src="images/icon5.png"/>
+						<a href="">退出登录</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<script>
+	var off=true;
+	$("#logo").click(function(){
+		if (off) {
+			$("#nav-list").stop().animate({'left':'0'},500);
+			off=false;
+		}
+		else{
+			$("#nav-list").stop().animate({'left':'-65%'},500);
+			off=true;
+		}
+	})
+	$('.tx').click(function(){
+		if ($('#span').text()=='未登录') {
+			window.location.href='login.html'
+		}
+	})
+</script>
