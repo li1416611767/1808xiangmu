@@ -1,0 +1,69 @@
+.message {
+  border: none;
+  outline: medium;
+  padding: 0.2rem;
+  font-size: 0.28rem;
+  resize: none;
+  width: 100%;
+}
+.choose_img {
+  margin-top: 0.18rem;
+  margin-left: 0.26rem;
+}
+.choose_img li:nth-child(4n){
+  margin-right: 0;
+}
+.choose_img li {
+  float: left;
+  width: 1.15rem;
+  height: 1.18rem;
+  margin-right: 0.38rem;
+  overflow: hidden;
+  margin-bottom: 0.18rem;
+}
+.choose_img li img {
+  width: 100%;
+  height: 100%;
+}
+.text1 {
+  font-size: 0.3rem;
+  margin-right: 0.3rem;
+  margin-top: 0.27rem;
+}
+.choose_img li.add {
+  position: relative;
+  width: 1.18rem;
+  height: 1.18rem;
+  border: 1px solid #dedede;
+}
+.choose_img li.add > img {
+  width: 0.53rem;
+  height: 0.53rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#files{
+  width: 1.18rem;
+  height: 1.18rem;
+  opacity: 0;
+  z-index: 999;
+  cursor: pointer;
+}
+.moreImgs{
+  position: relative;
+}
+.delete{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background:url("../img/delete.png") no-repeat;
+  background-size: cover;
+  height: 0.3rem;
+  width: 0.3rem;
+  display: none;
+}

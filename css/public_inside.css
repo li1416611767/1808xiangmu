@@ -1,0 +1,207 @@
+/*侧边栏开始*/
+.asideBox{
+    width: 4rem;
+    height: 10.5rem;
+    z-index: 99;
+    background: url(../img/asideBg.png) no-repeat;
+    display: none;
+    position: fixed;
+    top: 1rem;
+    background-color: white;
+
+}
+/*动画*/
+@keyframes width {
+    0%{width:1.05rem;opacity: 0.3;}
+    50%{width: 2.1rem;opacity: 0.6}
+    70%{width:3.15rem;opacity: 0.9}
+    100%{width:4.2rem;opacity: 1;}
+}
+.asideMain{
+    width: 4rem;
+    height: 11.4rem;
+    margin: 0.4rem 0 0 0.15rem;
+}
+.asideTop{
+    width: 100%;
+    height: 1.5rem;
+    border-bottom: 0.02rem solid black;
+}
+.asidePrc{
+    width: 0.98rem;
+    height: 0.98rem;
+    background: paleturquoise;
+    margin-left: 0.25rem;
+    float: left;
+    border-radius: 50%;
+}
+.asidePrc img{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-top: -0.33rem;
+}
+.nameUser{
+    float: left;
+    text-align: center;
+    margin-top: 0.3rem;
+    margin-left: 0.25rem;
+    height: 0.46rem;
+    font-size: 0.34rem;
+    /*color: blue;*/
+}
+.nav{
+    width: 3.74rem;
+    margin: 0.35rem 0 0 0.3rem;
+}
+.nav li{
+    width: 100%;
+    height: 1.05rem;
+    display: block;
+    font-size: 0.32rem;
+    color: #656565;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+.select{
+    color:orange;
+}
+.navA{
+    width: 3.74rem;
+    height: 1.05rem;
+    display: block;
+}
+.headName{
+    width: 1.36rem;
+    height: 0.38rem;
+    text-align:left;
+    float: left;
+    margin-top: 0.3rem;
+    margin-left: 0.25rem;
+}
+.navPrc{
+    width: 0.96rem;
+    height: 0.96rem;
+    border-radius: 50%;
+    float: left;
+}
+.navBg{
+    background: rgb(255,143,85);
+}
+.navBg1{
+    background: rgb(255,138,128);
+}
+.navBg1 img,.navBg img,.navBg2 img,.navBg3 img{
+    width: 0.6rem;
+    height: 0.55rem;
+    margin-left: 0.17rem;
+    margin-top: 0.2rem;
+}
+.navBg2{
+    background: rgb(148,196,241);
+}
+.navBg3{
+    background: rgb(153,210,43);
+}
+.navBg4{
+    background: rgb(179,175,244);
+}
+.navBg4 img{
+    width: 0.7rem;
+    height: 0.55rem;
+    margin-left: 0.1rem;
+    margin-top: 0.17rem;
+}
+.cbl_ditu{
+    width:4.25rem;
+}
+.cbl_ditu img{
+    width: 3.3rem;
+    position: absolute;
+    bottom: -1rem;
+    opacity: 0.5;
+    right: 0;
+    z-index: -1;
+}
+
+
+/*加载动画css*/
+.loader{ position: absolute;top:40%;left:50%;right:50%;bottom:60%;margin: auto; width: 0.9rem; height:0.9rem; border-radius: 50%; display: none; vertical-align: middle;border: 0.08rem dotted rgb(255, 9, 7); -webkit-transition: all 1s ease; transition: all 1s ease; -webkit-animation: dotted-spin 1s linear infinite; animation: dotted-spin 1s linear infinite; border-bottom-width: 1px; border-bottom-color: rgba(255, 9, 7, 0.3); border-left-width: 0.02rem; border-left-color: rgba(255, 9, 7, 0.5); border-top-width: 0.03rem; border-right-width: 0.04rem; border-top-color: rgba(255, 9, 7, 0.7); }
+.loader .loader-pacman,  .loader-pacman { position: absolute; top: 0.7rem; left: 0.25rem; width: 0; height: 0; border-right: 0.15rem solid transparent; border-top: 0.15rem solid rgb(255, 9, 7); border-left: 0.15rem solid rgb(255, 9, 7); border-bottom: 0.15rem solid rgb(255, 9, 7); border-top-left-radius: 0.15rem; border-top-right-radius: 0.15rem; border-bottom-left-radius: 0.15rem; border-bottom-right-radius: 0.15rem; }
+@-webkit-keyframes dotted-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+@keyframes dotted-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+/*延时加载样式*/
+/*加载样式 */
+@-webkit-keyframes fade {from {opacity: 1;}to {opacity: 0.25;}}
+#loading{padding:10px 0;display:none;background: #f8d8cb;clear: both;}
+div.spinner {margin:0 auto;position: relative;width: 0.875rem;height:0.875rem;display: block;z-index:100;}
+div.spinner div {width: 20%;height: 20%;background: #666;position: absolute;left: 0;right: 0;margin: 0 auto;top: 50%;opacity: 0;-webkit-animation: fade 1s linear infinite;-webkit-border-radius: 1.875rem;}
+div.spinner div.bar1 {-webkit-transform:rotate(0deg) translate(0, -142%); -webkit-animation-delay: 0s;}
+div.spinner div.bar2 {-webkit-transform:rotate(30deg) translate(0, -142%); -webkit-animation-delay: -0.9167s;}
+div.spinner div.bar3 {-webkit-transform:rotate(60deg) translate(0, -142%); -webkit-animation-delay: -0.833s;}
+div.spinner div.bar4 {-webkit-transform:rotate(90deg) translate(0, -142%); -webkit-animation-delay: -0.75s;}
+div.spinner div.bar5 {-webkit-transform:rotate(120deg) translate(0, -142%); -webkit-animation-delay: -0.667s;}
+div.spinner div.bar6 {-webkit-transform:rotate(150deg) translate(0, -142%); -webkit-animation-delay: -0.5833s;}
+div.spinner div.bar7 {-webkit-transform:rotate(180deg) translate(0, -142%); -webkit-animation-delay: -0.5s;}
+div.spinner div.bar8 {-webkit-transform:rotate(210deg) translate(0, -142%); -webkit-animation-delay: -0.41667s;}
+div.spinner div.bar9 {-webkit-transform:rotate(240deg) translate(0, -142%); -webkit-animation-delay: -0.333s;}
+div.spinner div.bar10 {-webkit-transform:rotate(270deg) translate(0, -142%); -webkit-animation-delay: -0.25s;}
+div.spinner div.bar11 {-webkit-transform:rotate(300deg) translate(0, -142%); -webkit-animation-delay: -0.1667s;}
+div.spinner div.bar12 {-webkit-transform:rotate(330deg) translate(0, -142%); -webkit-animation-delay: -0.0833s;}
+div.loadding p{text-align: center;font-size: 0.27rem;color: #928888;font-weight: bold;}
+div.loadding p.loadingText{display:none;text-align: center;color:#ccc;height: 40px;line-height: 40px;}
+
+/*弹窗样式*/
+/*弹窗开始*/
+.reveal-modal{
+    top: -1.7rem;
+    left: 1.2rem;
+    font-size: 0.16rem;
+    height: 1.7rem;
+    width: 65%;
+    background: #eee;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+}
+@keyframes reveal-modal {
+    0%{top: -1.7rem}
+    10%{top: -1.2rem}
+    40%{top: -0.8rem}
+    70%{top: -0.3rem}
+    100%{top: 0}
+}
+.reveal-modal h1{
+    margin-top: 0.5rem;
+}
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0,0,0,.8);
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+}
+/*弹窗结束*/
