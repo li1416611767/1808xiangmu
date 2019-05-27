@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日记墙</title>
+	<link rel="stylesheet" href="css/m-common.css"> 
+	<link rel="stylesheet" type="text/css" href="css/diary.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/login.js"></script>
+</head>
+<body>
+	<div class="all">
+		<div class="topBanner">
+			<div class="click"><img src="images/logo.png" alt=""></div>
+			<span>日记墙</span>
+			<div id="add"><img src="images/log2.png" alt=""></div>
+		</div>
+		<div class="big">
+			<div id="numb">
+			<!-- <div id="numbimg">
+				<img src="images/girl-1.jpg" alt=""></div>
+				<div id="numbcountes">
+					<p>用户名：</p>
+					<p id="ptime">时间</p>
+					<p>此处为留言内容</p>
+					<p><img src="images/bbbb.png" alt=""></p>
+				</div>  -->
+			</div>
+			
+		</div>
+	</div>	
+
+	<script type="text/javascript">
+		$.ajax({
+			url:'mvc/index.php?c=Login&a=query',
+			type:'post',
+			data:{
+				id:'id',
+			},
+			success:function(data){
+				console.log(data)
+				var json=JSON.parse(data)
+				console.log(json)
+				$.each(json,function(i,item){
+
+				var d=new Date().getTime();
+				var e=Math.ceil(d/1000)
+				console.log(d)
+				console.log(e)
+				var f=e-item.time
+		        // d.setTime(data[i].time*1000);
+		        console.log(item.time)
+		        console.log(f)
+
+
+var timer1=item.time
+var time=((new Date().getTime()/1000)-timer1)
+// console.log(time)
+var days=Math.floor(time/(24*3600))
+console.log(days)
+var leave1=time%(24*3600)
+var hours=Math.floor(leave1/(3600))
+var leave2=leave1%(3600)
+var minutes=Math.floor(leave2/(60))
+var leave3=leave2%(60)
+var seconds=Math.round(leave3)
+var cha;
+if (days<=3) {
+if (days!=0) {
+cha=days+'天前'
+}
+else if (days==0&&hours!=0) {
+cha=hours+'小时前'
+}
+else if (days==0&&hours==0&&minutes!=0) {
+cha=minutes+'分钟前'
+}
+}
+
+console.log(cha)
+
+                 $('#numb').append(`<div id="numbimg"><img src="${item.img}" alt=""></div>
+				<div id="numbcountes">
+					<p>${item.name}</p>
+					<p id="ptime">${cha}</p>
+					<p>${item.countes}</p>
+				<p><img src="images/bbbb.png" alt=""></p>
+				</div>`)
+				})
+				
+			}
+		})
+	</script>
+</body>
+</html>

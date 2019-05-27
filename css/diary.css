@@ -1,0 +1,107 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+img{
+	width: 2.92rem;
+	height: 2.8rem;
+}
+.all{
+	width: 100%;
+	height: 100%;
+}
+.all .topBanner{
+	width: 100%;
+	height: 8%;
+	background-color: #ff8288;
+	line-height: 2.3rem;
+	color: #fff;
+	text-align: center;
+	position:absolute;
+	/*display: inline-block;*/
+}
+.all .topBanner .click{
+	width: 1.55rem;
+	height: 1.05rem;
+	position: absolute;
+	left: 0.15rem;
+	top: 0.6rem;
+}
+.all .topBanner .click img{
+	width: 1.25rem;
+	height: 1.25rem;
+}
+.all .topBanner span{
+	display: inline-block;
+	font-size: 0.85rem;
+	color: white;
+}
+.big{
+	width: 100%;
+	height: 92%;
+	background: #FDEEE7;
+	position: relative;
+	top: 8%;
+}
+#numb{
+	width: 90%;
+	/*height: 7.85rem;*/
+	background-color: white;
+	font-size: 0.55rem;
+	border: none;
+	border-radius:0.25rem;		
+	padding-left:0.45rem ;
+	position: absolute;
+	top: 2%;
+	left: 3%;
+}
+#numbimg{
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-top: 0.5rem;
+}
+#numb img{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+#numbcountes{
+	width: 10.10rem;
+	/*height: 3.75rem;*/
+	position: relative;
+	top: -2.60rem;
+	left: 3.00rem;
+	/*border: 0.025rem solid red;*/
+}
+#numbcountes img{
+	width: 10.25rem;
+	height: 5.5rem;
+	margin-top: 0.3rem;
+}
+.arrange{
+	width: 92%;
+	height: 70%;
+	position: absolute;
+	top:5.55rem;
+	left: 2%;
+}
+.arrange li{
+	width: 20%;
+	height: 15%;
+	margin-left: 0.71rem;
+	margin-top: 0.5rem;
+	float: left;
+}
+#add{
+	position: relative;
+	right: -7rem;
+	margin-top: -2rem;
+}
+#add img{
+	width: 1.25rem;
+	height: 1.25rem;
+}
+#ptime{
+	float: right;
+	position: relative;
+	top: -0.8rem;
+}
