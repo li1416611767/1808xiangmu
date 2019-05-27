@@ -20,6 +20,7 @@
 				<span>免费绑定手机，看看谁暗恋了自己</span>
 				<div class="phone">
 					<input type="text" placeholder="填写11位手机号码" id="phone" class="number"value="">
+					<input type="button" value="" id="code"/ style="display: none">
 					<input type="button" value="获取验证码" class="butt">
 				</div>
 				<div class="shows">
@@ -28,7 +29,7 @@
 				</div>
 				<span>请输入验证码</span>
 				<div class="yzm">
-					<input type="text" value="请填写手机验证码" class="nums">
+					<input type="text" placeholder="请填写手机验证码" class="nums" id="yz">
 					<p class="yw" style="display: none" >您输入的验证码有误</p>
 					<input type="button" value="登录" class="denglu" id="logBtn">
 					<span>输入手机号填写收到的验证码即可登录</span>
@@ -36,5 +37,6 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/login.js?#1"></script>
 </body>
 </html>
