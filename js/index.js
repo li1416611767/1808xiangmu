@@ -1,11 +1,14 @@
 var off=true;
 	$("#logo").click(function(){
+		console.log(111)
 		if (off) {
 			$("#nav-list").stop().animate({'left':'0'},500);
+			$("#logoimg").stop().animate({'left':'65%'},500)
 			off=false;
 		}
 		else{
 			$("#nav-list").stop().animate({'left':'-65%'},500);
+			$("#logoimg").stop().animate({'left':'0'},500)
 			off=true;
 		}
 	})
@@ -47,3 +50,4 @@ else{
 	$('#span').text('未登录');
 	localStorage.userimg=JSON.stringify({img:$('.tx').attr('src'),name:$('#span').text()})
 }
+console.log(111)

@@ -1,13 +1,5 @@
 (function($){
-        //手机号正则验证
-        var reg2 = /^1[34578]{1}\d{9}$/;
-		$('#phone').blur(function(){
-	    if(reg2.test(phone.value)){
-		  phone.style.borderBottom="1px solid #ccc";
-	    }else{
-		  phone.style.borderBottom="3px solid #ff6d6d";
-		}
-	    })
+		//手机号正则验证
 	   //获取验证码
 	   var off=true;
         var arr=new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
@@ -24,7 +16,7 @@
 			url:'php/index.php?c=Login&a=query1',
 			type:'post',
 			data:{
-				page:$(phone).val(),
+				page:$('#phone').val(),
 			},
 			success:function(data){
 				var str=JSON.parse(data)
@@ -38,9 +30,9 @@
 			}
 		})
 			if ($('#phone').val()=='') {
-            alert('手机号码不能为空')
-		}else(alert(value))
-		return
+			alert('手机号码不能为空')
+			return
+		}else (alert(value))
 		})
 
 		$('.nums').onblur=function(){
@@ -60,6 +52,14 @@
 
 
 		$('.denglu').click(function(){
+			var reg2 = /^1[34578]{1}\d{9}$/;
+	    if(reg2.test($('#phone').val())){
+			console.log(21)
+		}
+		else{
+			alert('手机号有误')
+			return
+		}
 		if (off) {
 		$.ajax({
 			url:'php/index.php?c=Login&a=register1',
@@ -68,7 +68,6 @@
 				username:$('#phone').val(),
 			},
 			success:function(data){
-				console.log(data)
                 var str=JSON.parse(data);
                 console.log(str)
                 if (str.code=='200') {

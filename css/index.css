@@ -6,6 +6,16 @@ body{
     background: #FDEFE7;
     font-family: "楷体";
     position: relative;
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#logoimg{
+    width: 100%;
+    height: 100%;
 }
 ul li{
     list-style: none;
@@ -14,9 +24,6 @@ ul li{
     width: 100%;
     height: 10.6rem;
     background: #FF8288;
-    position: absolute;
-    left: 0;
-    top: 0;
     line-height: 10.6rem;
     text-align: center;
     font-size:55px;
@@ -74,8 +81,12 @@ ul li{
     left: 20.5rem;
     top: 8.75rem;
 }
+#logoimg{
+    position: relative;
+}
 .list{
     width: 100%;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 25.0rem;
