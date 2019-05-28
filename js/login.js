@@ -10,8 +10,16 @@
             value+=arr[index]
           }
         }
-		obtainCode();
 		$('.butt').click(function(){
+			obtainCode()
+			var reg2 = /^1[34578]{1}\d{9}$/;
+	    if(reg2.test($('#phone').val())){
+			console.log(21)
+		}
+		else{
+			alert('手机号有误')
+			return
+		}
 			$.ajax({
 			url:'php/index.php?c=Login&a=query1',
 			type:'post',
@@ -38,34 +46,15 @@
 		$('.nums').onblur=function(){
 			alert(1)
 		}
-  
-        $('.denglu').click(function(){
-		var transCode=code.value.toUpperCase();
-		if(yz.value.length==0){
-            alert("验证码不能为空");
-        }
-        yz.value="";
-		})
-
-
-
 
 
 		$('.denglu').click(function(){
 			var transCode=code.value.toUpperCase();
-		if(yz.value.length==0){
+		if($('#yz').val().length==0){
 						alert("验证码不能为空");
 						return
         }
-				yz.value="";
-			var reg2 = /^1[34578]{1}\d{9}$/;
-	    if(reg2.test($('#phone').val())){
-			console.log(21)
-		}
-		else{
-			alert('手机号有误')
-			return
-		}
+				$('#yz').val('');;
 		if (off) {
 		$.ajax({
 			url:'php/index.php?c=Login&a=register1',
