@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="css/jianrong.css">
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+
+<div class="box">
+    <header class="head pink">
+        <div id="left_anniu">
+            <img src="images/logo.png" alt="" class="aside">
+        </div>
+        <p class="person">个人资料</p>
+    </header>
+    <!--主要部分开始-->
+    <main class="main">
+        <!--表单开始-->
+        <form  action="personal.php"  method="post" enctype="multipart/form-data" onsubmit="return checkPhone()">
+            <!--头像开始-->
+            <div class="prc">
+                <div id="myUpload"></div>
+            </div>
+            <!--头像结束-->
+            <div class="user">
+                <input type="text" placeholder="请输入您的名字" required id="username" name="username">
+            </div>
+            <div class="user">
+                <input type="text" placeholder="请输入您的手机号" required id="phone" name="phone" disabled>
+                <input type="hidden" name="Lid" id="Lid"/>
+            </div>
+            <div class="user love">
+                <input type="text" placeholder="想对他/她的爱的告白" name="messages" id="messages">
+            </div>
+            <input type="button" class="pink foot" value="保存" id="btn">
+        </form>
+    </main>
+    <div class="reveal-modal">
+        <h1></h1>
+    </div>
+</div>
+<script>
+    function checkPhone(){
+        var phone = document.getElementById('phone').value;
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            alert("手机号码有误，请重填");
+            return false;
+        }
+    }
+</script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/myUpload1.js"></script>
+<script src="js/app.js"></script>
+<script src="js/personal.js?#2"></script>
+</body>
+</html>

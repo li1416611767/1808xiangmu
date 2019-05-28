@@ -72,15 +72,18 @@
                 var str=JSON.parse(data);
                 console.log(str)
                 if (str.code=='200') {
+					window.location.href='index.html';
 					localStorage.username=$('#phone').val();
-                	alert('成功录入')
+                	alert('登录成功')
                 }
                 
 			}
 		})
 	}
 	else{
-		alert('成功录入')
+		window.location.href='index.html';
+		localStorage.username=$('#phone').val();
+		alert('登录成功')
 	}
 	})
 

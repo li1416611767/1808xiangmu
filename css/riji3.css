@@ -6,6 +6,9 @@
   resize: none;
   width: 100%;
 }
+body{
+  background: #F8D8CB;
+}
 .choose_img {
   margin-top: 0.18rem;
   margin-left: 0.26rem;

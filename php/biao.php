@@ -9,7 +9,8 @@ $sql = "CREATE TABLE liuyan (
     img VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
     countes VARCHAR(255) NOT NULL,
-    time VARCHAR(255) NOT NULL
+    time VARCHAR(255) NOT NULL,
+    logoimg VARCHAR(255) NOT NULL
     )";
     if ($conn->query($sql) === TRUE) {
         echo "成功";
