@@ -1,0 +1,162 @@
+          *{
+	   		padding: 0;
+	   		margin: 0;
+	   	}
+/* 样式参考联想移动官网 http://m.lenovo.com.cn/ */
+@charset "utf-8";
+/* CSS Document */
+/*公用部分*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, div, strong, label, em, a, span, input{margin:0;padding:0; font-family:'微软雅黑','Arial';}
+
+/*在移动端给overflow:hidden 最好给 overflow-x：hidden;同时给到元素 height:100%;*/
+/*-webkit-overflow-scrolling:touch;解决在苹果机测试时上下滑动页面不卡顿*/
+html,body {height:100%;overflow-x:hidden; -webkit-overflow-scrolling:touch;}
+body{touch-action: none;}
+ul li{list-style: none;}
+/*-webkit-tap-highlight-color:transparent;真机点击去除黑色背景*/
+a,input,span{text-decoration: none;color: #434343;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+em,i{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+input,textarea{outline: none;}
+.clearfix:after{display: block;clear: both;height: 0;visibility: hidden;font-size: 0;line-height: 0;content: "";}
+.clearfix{zoom:1;}
+/*文本超出一行显示省略号*/
+.ell{overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;white-space:nowrap;}
+/*盒图宽高=content+border  布局时明明一排的几个div的宽度和为总宽度却出现混乱，给每个div一个 box-sizing属性，属性值为：border-box；*/
+.border-box{box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+
+
+
+	   	.all{
+			width: 100%;
+			height: 100%;
+	   	}
+	   	.all .topBanner{
+			width: 100%;
+			height: 8%;
+			background-color: #ff8288;
+			line-height: 2.3rem;
+			color: #fff;
+			text-align: center;
+			position: relative;
+	   	}
+	   	.all .topBanner span{
+	   		    font-size: 0.85rem;
+                line-height: 0%;
+	   		color: white;
+         margin: 0 auto;
+	   	}
+
+	   	.all .topBanner a{position: absolute;left: 39px;top: 0.375rem}
+	   	   	.all .topBanner a img{width: 1.25rem;height:1.0rem;}
+	   	   	
+	   	.con{
+	   		width: 100%;
+	   		height: 92%;
+	   		background:#fdefe7;
+			overflow: hidden;
+			position: absolute;
+	   	}
+	   	.con .con_main{
+	   		width:92%;
+	   		margin: 0 auto;	
+	   		height: 92%;	
+	   		margin-top: 1.0rem;
+	   	}
+
+	   
+		.yw{
+			color: gray;
+			font-size: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+		.img{width: 100%;height: 100%;}
+	   	.con_main .text{
+	   		 width: 12.0rem;height: 7.5rem;
+	   		 margin: 10px auto;background: white;
+	   		 position: relative;
+	   	}
+	   		.con_main .text ul{position: relative;left: 16%;float: left;top: 0.625rem}
+	 	.con_main .text ul li{width: 2.75rem;height: 1.25rem;float: left;position: relative;margin-right: 3rem}
+	 		.con_main .text ul li img{width: 100%;height: 100%;}
+.leftimg{
+    left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5rem;
+}
+.rightimg{
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5rem
+}
+.centerimg{    left: 3.7rem;
+    width: 4.3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3rem; }
+    .centerimg img{width: 5.0rem;height: 1.2rem;}
+.rightimg img{width: 100%;height: 100%;border-radius: 50%;}
+
+.leftimg img{width: 100%;height: 100%;border-radius: 50%;}
+.bottomimg{
+	    left: 2rem;
+    width: 8rem;
+    height: 4rem;
+    position: absolute;
+    top: 12rem;
+}
+.bottomimg img{width: 100%;height: 100%;}
+
+.textb{ width: 12.0rem;height: 4.5rem;
+	   		 margin: 5.5rem auto;background: white;
+	   		 position: relative;    top: 2.4rem;}
+.textb ul {position: relative;left:6%;float: left;top: 0.625rem}
+.textb ul li{width: 2.75rem;height: 1.25rem;float: left;position: relative;}
+.textb ul li img{width: 100%;height: 100%;}
+ .con_main .time{ width: 12.0rem;height: 2.5rem;
+	   		 margin: -4rem auto;background: #ff8288;
+	   		 position: relative;border-radius: 4%;text-align: center;top: 1.85rem;}
+.con_main .time span{font-size: 52px;
+    color: white;
+    line-height: 2.5rem;
+    display: inline-block;}
+.hide{
+	width: 58%;
+    height: 91%;
+    position: absolute;
+    top: 2.35rem;
+    left: -59%;
+      background: #FFF;
+}
+.hide .img{
+	background: url(images/Layer1.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.hide .img .top{    left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5rem;}
+ .hide .img .top img{width: 100%;height: 100%; border-radius: 50%;}
+ .hide .img .aa{    position: absolute;
+    left: 3.8rem;
+    font-size: 0.85rem;
+    top: 2.2rem;}
+    hr{color: black;border:1px solid black;}
+.img ul li{width: 2.2rem;height:2.2rem;border-radius: 50%;position: relative;left: 1.2rem;top: 0.625rem;margin-top: 70px;}
+.img ul li img{width: 100%;height: 100%; border-radius: 50%;}
+.img  p{ font-size: 0.8rem;
+    position: relative;
+    top: -18.5rem;
+    left: 3.85rem;
+    margin-top: 2.7rem;
+    color: gray;}

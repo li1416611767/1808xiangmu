@@ -1,0 +1,74 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+img{
+	width: 2.92rem;
+	height: 2.8rem;
+}
+.all{
+	width: 100%;
+	height: 100%;
+	/*background: #FDEEE7;*/
+}
+.all .topBanner{
+	width: 100%;
+	height: 8%;
+	background-color: #ff8288;
+	line-height: 2.3rem;
+	color: #fff;
+	text-align: center;
+	position:fixed;
+	/*display: inline-block;*/
+}
+.click{
+	width: 1.55rem;
+	height: 1.05rem;
+	background: green;
+	position: absolute;
+	left: 0.15rem;
+	top: 0.6rem;
+	/*border: 1px solid red;*/
+	/*background: url(images/logo.png);*/
+}
+.all .topBanner span{
+	font-size: 0.85rem;
+	color: white;
+	float: right;
+	margin-right: 5%;
+}
+.big{
+	width: 100%;
+	height: 92%;
+	background: #FDEEE7;
+	position: relative;
+	top: 8%;
+}
+.numb{
+	width: 90%;
+	height: 4.85rem;
+	color: #cccccc;
+	font-size: 0.55rem;
+	border: none;
+	border-radius:0.25rem;		
+	padding-left:0.45rem ;
+	position: absolute;
+	top: 2%;
+	left: 3%;
+}
+.arrange{
+	width: 92%;
+	height: 70%;
+	/*background:red;*/
+	position: absolute;
+	top:5.55rem;
+	left: 2%;
+}
+.arrange li{
+	width: 20%;
+	height: 15%;
+	/*background: green;*/
+	margin-left: 0.71rem;
+	margin-top: 0.5rem;
+	float: left;
+}
