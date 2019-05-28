@@ -52,6 +52,12 @@
 
 
 		$('.denglu').click(function(){
+			var transCode=code.value.toUpperCase();
+		if(yz.value.length==0){
+						alert("验证码不能为空");
+						return
+        }
+				yz.value="";
 			var reg2 = /^1[34578]{1}\d{9}$/;
 	    if(reg2.test($('#phone').val())){
 			console.log(21)
