@@ -10,7 +10,7 @@ if($fs){
     $fileend = end($torrent);
     $fileend = strtolower($fileend);
 
-    $path = './data/'.time() . rand(1, 999999) . '.' . $fileend;
+    $path = '/data/'.time() . rand(1, 999999) . '.' . $fileend;
     $rs = move_uploaded_file($fs["tmp_name"], WEB_ROOT . $path);
 
     if ($rs) {

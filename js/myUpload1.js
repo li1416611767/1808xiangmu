@@ -82,12 +82,14 @@
 						url:uploadPath,
 						dataType: "json",
 						success : function(data,status){
+							console.log(data,status)
 							if(data.result){
 								if(imageEdit) {
 									imageEdit.find('input[role="myupload-picture-input"]').val(data.path);
 									imageEdit.find('img[role="myupload-picture-show"]').attr("src",data.path);
 								}else{
-									$('.table-cell img').attr('src',data.path)
+									var dataimg=`http://penghui.beiwang1808.top/anlian${data.path}`
+									$('.table-cell img').attr('src',dataimg)
 								}								
 							}else{
 								if(callback) {

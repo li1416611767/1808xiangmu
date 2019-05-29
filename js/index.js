@@ -18,7 +18,8 @@ var off=true;
 		}
     })
 $('#tui').click(function(){
-    delete localStorage.username;
+	delete localStorage.username;
+    delete localStorage.userimg;	
     window.location.href='login.html'
 })
 var val=localStorage.username
@@ -44,6 +45,7 @@ if (val!=undefined) {
 			})
 		}
 	})
+	localStorage.userimg=JSON.stringify({img:$('.tx').attr('src'),name:$('#span').text()})
 }
 else{
 	$('.tx').attr('src','images/personal_03.png')

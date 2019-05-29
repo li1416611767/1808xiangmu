@@ -24,7 +24,6 @@ $(document).ready(function () {
                         logoimg:xuan.img,
                     },
                     success:function(data) {
-                        console.log(data)
                         var str=JSON.parse(data)
                         if (str.code=='200') {
                             window.location.href="diary.html"

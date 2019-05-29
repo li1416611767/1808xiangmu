@@ -95,8 +95,9 @@
 									imageEdit.find('input[role="myupload-picture-input"]').val(data.path);
 									imageEdit.find('img[role="myupload-picture-show"]').attr("src",data.path);
 								}else{
-									$(".add").before("<li class='moreImgs'><div class='delete'></div><img src=" +data.path+ " alt=\"\"></li>");
-								}								
+									var dataimg=`http://penghui.beiwang1808.top/anlian${data.path}`
+									$(".add").before("<li class='moreImgs'><div class='delete'></div><img src=" +dataimg+ " alt=\"\"></li>");
+								}
 							}else{
 								if(callback) {
 									callback(data.errormsg);
